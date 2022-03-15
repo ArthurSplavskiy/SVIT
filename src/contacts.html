@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ua">
+	@@include('html/_head.htm',{
+		"title":"Контакти"
+	})
+	<body>
+		<div class="preloader"></div>
+		<div class="page-bg">
+			<div class="page-bg__image-ibg">
+				<img src="img/girls/girl-bg.png" alt="Party Go">
+			</div>
+		</div>
+		<div class="wrapper" id="page-top">
+			@@include('html/_header.htm',{})
+			<main class="page contacts-page">
+
+				<div class="page-breadcrumbs">
+					<div class="_container">
+						@@include('html/_breadcrumbs.htm', {
+							"root": "Головна",
+							"current": "Контакти"
+						})
+					</div>
+				</div>
+
+				<section class="page-section">
+					<div class="_container">
+						<div class="page-section__content">
+							<div class="page-section__head" data-id="1">
+								<h2>Наші контакти</h2>
+
+								<div class="page-contacts">
+									<div class="page-contacts__content">
+
+										<div class="page-contacts__phones">
+											<a href="tel:+380961111076" itemprop="telephone">(096) 111 - 10 - 76</a>
+											<a href="tel:+380961312070" itemprop="telephone">(096) 131 - 20 - 70</a>
+										</div>
+
+										<div class="page-contacts__address">
+											м. Київ, вул. Михайла Грушевського 45, 5-й поверх
+										</div>
+
+										<div class="page-contacts__social">
+											<h3>Підписуйся на наші соцмережі!</h3>
+
+											<ul class="social__list">
+												<li>
+													<a href="https://www.facebook.com/" target="_blank" rel="nofollow">
+														<img data-src="img/interface/facebook-logo.svg" data-inline-svg alt="Party Go">
+														<span>INSTaGRAM</span>
+													</a>
+												</li>
+												<li>
+													<a href="https://www.instagram.com/" target="_blank" rel="nofollow">
+														<img data-src="img/interface/instagram-logo.svg" data-inline-svg alt="Party Go">
+														<span>FACEBoOK</span>
+													</a>
+												</li>
+												<li>
+													<a href="https://www.pinterest.ru/" target="_blank" rel="nofollow">
+														<img data-src="img/interface/pinterest-logo.svg" data-inline-svg alt="Party Go">
+														<span>PiNTEREST</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="page-section__body">
+								
+								<div class="page-content" data-da="[data-id='1'], 992, 1">
+									<div class="page-content__image-ibg">
+										<img src="img/boys/boys-02.jpeg" alt="Party Go">
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="page-section">
+					<div class="_container">
+						<div class="page-section__head">
+							<h2>Залишилися запитання?</h2>
+						</div>
+
+						<div class="page-grid">
+							<div class="page-grid__content">
+								<div class="page-grid__column">
+
+									<div class="page-content">
+										<div class="page-content__image-ibg">
+											<img src="img/cover/go-girls-cover.jpeg" alt="Party Go">
+										</div>
+									</div>
+
+								</div>
+								<div class="page-grid__column">
+									
+									<!-- ============================= FORM ============================= -->
+									<div class="page-form">
+										<form class="form" action="#" data-message="[data-popup='successPopup']" data-test>
+											<fieldset class="form__wrapper">
+												<div class="form__item">
+													<input type="text" name="name" placeholder="ІМ’Я">
+												</div>
+												<div class="form__item">
+													<input type="text" name="name" placeholder="ПРІЗВИЩЕ">
+												</div>
+												<div class="form__item">
+													<input type="text" name="phone" placeholder="МОБІЛЬНИЙ НОМЕР" data-phone-mask data-required>
+												</div>
+												<div class="form__item">
+													<input type="text" name="email" placeholder="E-MAIL" data-required="email">
+												</div>
+												<div class="form__item form__item_textarea">
+													<textarea name="message" placeholder="ваше повідомлення"></textarea>
+												</div>
+											</fieldset>
+
+											<fieldset class="form__controls">
+												<button type="submit" class="primary-btn primary-btn_black">НАДІСЛАТИ</button>
+											</fieldset>
+
+										</form>
+									</div>
+									<!-- ============================= FORM ============================= -->
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+			</main>
+			@@include('html/_footer.htm',{})
+			@@include('html/_js.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+	</body>
+</html>

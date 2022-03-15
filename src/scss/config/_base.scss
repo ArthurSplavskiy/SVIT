@@ -1,0 +1,204 @@
+html, body {
+	height: 100%;
+	min-width: $minWidth + px;
+}
+
+body {
+	line-height: 1;
+	font-family: $defaultFontFamily;
+	font-size: $fontSize;
+	color: $white;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: $black;
+
+	.lock & {
+		overflow: hidden;
+	}
+}
+
+h2 {
+	@extend %hn80-24regular;
+}
+
+h3 {
+	@extend %hn32-16regular;
+	@include lh(40, 32, 24, 16);
+}
+
+// * * * Page Layout
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	position: relative;
+	z-index: z('wrapper');
+
+	// * Page is loaded
+	.loaded & {
+	}
+}
+
+.page {
+	min-width: 0;
+	margin-top: rem(191);
+	@media(max-width: $mobileSmall) {
+		margin-top: rem(144);
+	}
+}
+
+// * Page container
+@if ($responsiveType==1) {
+	// Отзывчивая
+	[class*="__container"] {
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+			margin: 0 auto;
+
+			// @media(min-width: em(1920)) {
+			// 	max-width: rem($hdWidth);
+			// }
+		}
+		@if ($containerPadding>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
+		}
+	}
+} @else {
+	// По брейк-поинтам
+	[class*="__container"] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: rem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: rem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+
+// * * * Other styles
+
+// * fullscreen block
+[data-fullscreen] {
+	height: 100vh;
+	.touch & {
+		height: calc(var(--vh, 1vh) * 100);
+		@media (max-width: $mobile) {
+			transition: height 0.2s;
+		}
+	}
+}
+
+// * IBG
+// Сниппет (HTML): ibg (div c картинкой и классами)
+// Сниппет (HTML): ibga (a c картинкой и классами)
+[class*="__image-ibg"] {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.spoller-absolute {
+	position: relative;
+	[data-spoller] {
+		display: grid;
+		grid-template-columns: auto auto;
+		gap: rem(8);
+		place-items: center;
+		cursor: pointer;
+
+		+ * {
+			color: $grey;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: $white;
+			padding: rem(6) 0;
+
+			li {
+				padding: 0 em(8);
+			}
+			a {
+				transition: all $defaultTransition;
+				
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+
+		&._spoller-active {
+			svg, img {
+				transform: rotate(-180deg);
+			}
+			
+		}
+		svg, img {
+			width: rem(16);
+			transition: all $defaultTransition;
+		}
+	}
+}
+
+[data-favorite] {
+	cursor: pointer;
+	&._active {
+		// svg path {
+		// 	fill: $woodsmoke;
+		// }
+	}
+	svg {
+		width: 16px;
+	}
+	svg path {
+		fill: none;
+		// stroke: $woodsmoke;
+		transition: fill $defaultTransition;
+	}
+}
+
+.btn-centered {
+	display: flex;
+    flex-direction: column;
+	.primary-btn {
+        @media(min-width: $tablet) {
+            margin: rem(100) auto 0 auto;
+        }
+    }
+}
+
+.s-mb {
+	margin-bottom: rem(168);
+
+    @media(max-width: $mobileSmall) {
+        margin-bottom: rem(92);
+    }
+}

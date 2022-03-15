@@ -1,0 +1,70 @@
+.search-form {
+    width: 100%;
+    position: relative;
+
+    &__content {
+        display: grid;
+        align-items: center;
+
+        @media(min-width: $tablet) {
+            grid-template-columns: rem(24) 1fr rem(24);
+        }
+    }
+    &__box {
+        @media(max-width: $tablet) {
+            position: absolute;
+            left: rem(16);
+            width: rem(16);
+            height: rem(16);
+
+            svg path {
+                fill: $medium-grey;
+            }
+        }
+
+        svg {
+            width: rem(24);
+            @media(max-width: $tablet) {
+                width: rem(16);
+            }
+        }
+    }
+    &__input {
+        @extend %sf16-12regular;
+        display: flex;
+        align-items: center;
+        padding: rem(7) rem(8) rem(6) rem(8);
+        background: transparent;
+        height: rem(32);
+        color: $white;
+        line-height: math.div(26, 16);
+
+        @media(max-width: $mobileSmall) {
+            line-height: 100%;
+        }
+
+        @media(max-width: $tablet) {
+            padding: rem(9) rem(8) rem(6) rem(40);
+        }
+
+        @media (max-width: $tablet) {
+			border-radius: rem(20);
+            background: $main-grey;
+		}
+        
+        @include placeholder-content {
+            @extend %sf16-12regular;
+            color: $medium-grey;
+            line-height: math.div(26, 16);
+            @media(max-width: $mobileSmall) {
+                line-height: 100%;
+            }
+        }
+    }
+    &__close {
+        cursor: pointer;
+        @media(max-width: $tablet) {
+            display: none;
+        }
+    }
+}

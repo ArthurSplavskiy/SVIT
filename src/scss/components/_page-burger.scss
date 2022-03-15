@@ -1,0 +1,55 @@
+.icon-menu {
+	display: none;
+	width: rem(24);
+	height: rem(24);
+	align-items: center;
+	justify-content: center;
+	@media (max-width: $tablet) {
+		display: flex;
+	}
+
+	&.js-open {
+		.icon-menu__content {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: 50%;
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+
+	&__content {
+		display: block;
+		position: relative;
+		width: rem(17);
+		height: rem(11);
+		cursor: pointer;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(1);
+			background-color: $white;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: 50%;
+		}
+	}
+}

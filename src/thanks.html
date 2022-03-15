@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ua">
+	@@include('html/_head.htm',{
+		"title":"Вітаємо!"
+	})
+	<body>
+		<div class="preloader"></div>
+		<div class="page-bg">
+			<div class="page-bg__image-ibg">
+				<img src="img/girls/girl-bg.png" alt="Party Go">
+			</div>
+		</div>
+		<div class="wrapper" id="page-top">
+			@@include('html/_header.htm',{})
+			<main class="page page-utils">
+
+				<div class="page-utils__content">
+					<img src="img/interface/ellipse-404.svg" alt="Party Go">
+					<h2>Вітаємо!</h2>
+					<strong>Оплата пройшла успішно</strong>
+					<div class="page-utils__link">
+						<span>Чек про оплату надіслано на пошту</span>
+						<a href="mailto:polina_konstantinova@gmail.com">polina_konstantinova@gmail.com</a>
+					</div>
+					<a href="index.html" class="primary-btn primary-btn_black">НА ГОЛОВНУ</a>
+				</div>
+
+			</main>
+			@@include('html/_footer.htm',{})
+			@@include('html/_js.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+	</body>
+</html>

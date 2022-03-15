@@ -1,0 +1,204 @@
+<div class="hystmodal" data-popup="callbackPopup">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+			<div class="hystmodal__head">
+				<h5>ЗВОРОТНІЙ ЗВ’ЯЗОК</h5>
+				<button data-hystclose class="hystmodal__close">Закрыть</button>
+			</div>
+			<!-- ============================= FORM ============================= -->
+			<div class="page-form">
+				<form class="form" action="#" data-message="[data-popup='successPopup']" data-test>
+					<fieldset class="form__wrapper">
+						<div class="form__item">
+							<input type="text" name="name" placeholder="ІМ’Я">
+						</div>
+						<div class="form__item">
+							<input type="text" name="name" placeholder="ФАмІЛІЯ">
+						</div>
+						<div class="form__item">
+							<input type="text" name="email" placeholder="E-MAIL" data-required="email">
+						</div>
+						<div class="form__item">
+							<input type="text" name="phone" placeholder="МоБІЛЬНИЙ НОМЕР" data-phone-mask data-required>
+						</div>
+						<div class="form__item form__item_textarea">
+							<span>Якщо вам потрібно додати примітку до замовлення, ви можете додати коментар і ми з вами зв’яжемося.</span>
+							<textarea name="message" placeholder="ВАШ ТЕКСТ"></textarea>
+						</div>
+					</fieldset>
+
+					<div class="form__controls">
+						<button type="submit" class="primary-btn_black primary-btn">НАДІСЛАТИ</button>
+						<!-- <div class="checkbox">
+							<label class="checkbox__text">
+								<input
+									checked
+									type="checkbox"
+									name="agreement"
+									class="checkbox__input"
+									data-required
+								>
+								<span class="icon-check"></span>
+								<span>I agree to the processing of personal data</span>
+							</label>
+						</div> -->
+					</div>
+
+				</form>
+			</div>
+			<!-- ============================= FORM ============================= -->
+
+        </div>
+    </div>
+</div>
+
+<div class="hystmodal" data-popup="buyPopup">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+			<div class="hystmodal__head">
+				<h5>КУПИТИ В ОДИН КЛІК</h5>
+				<button data-hystclose class="hystmodal__close">Закрыть</button>
+			</div>
+			<!-- ============================= FORM ============================= -->
+			<div class="page-form">
+				<form class="form" action="#" data-message="[data-popup='successPopup']" data-test>
+					<fieldset class="form__wrapper">
+						<div class="form__item">
+							<input type="text" name="name" placeholder="ІМ’Я">
+						</div>
+						<div class="form__item">
+							<input type="text" name="phone" placeholder="МоБІЛЬНИЙ НОМЕР" data-phone-mask data-required>
+						</div>
+						<div class="form__item form__item_textarea">
+							<span>Якщо вам потрібно додати примітку до замовлення, ви можете додати коментар і ми з вами зв’яжемося.</span>
+							<textarea name="message" placeholder="ВАШ ТЕКСТ"></textarea>
+						</div>
+					</fieldset>
+
+					<div class="form__controls">
+						<button type="submit" class="primary-btn_black primary-btn">НАДІСЛАТИ</button>
+						<!-- <div class="checkbox">
+							<label class="checkbox__text">
+								<input
+									checked
+									type="checkbox"
+									name="agreement"
+									class="checkbox__input"
+									data-required
+								>
+								<span class="icon-check"></span>
+								<span>I agree to the processing of personal data</span>
+							</label>
+						</div> -->
+					</div>
+
+				</form>
+			</div>
+			<!-- ============================= FORM ============================= -->
+
+        </div>
+    </div>
+</div>
+
+<div class="hystmodal page-cart" data-popup="cartPopup">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+
+			<div class="page-cart__content">
+				<div class="page-cart__head">
+					<span>КОРЗИНА</span>
+					<button data-hystclose class="hystmodal__close">Закрыть</button>
+				</div>
+				<div class="page-cart__body">
+					<span class="page-cart__empty">Корзина пуста, додайте послуги</span>
+
+					<div class="page-cart__item cart-item">
+						<div class="cart-item__content">
+							<div class="cart-item__preview">
+								<div class="cart-item__image-ibg">
+									<img src="img/girls/girls-02.jpeg" alt="Party Go">
+								</div>
+							</div>
+							<div class="cart-item__text">
+								<h4 class="cart-item__head">
+									<span>Оренда яхти</span>
+									<img src="img/interface/close.svg" alt="Party Go">
+								</h4>
+								<p class="cart-item__descr">Майстер - клас з репетитором. Злови свій дзен</p>
+								<div class="cart-item__controls">
+									<div class="quantity">
+										<div class="quantity__button quantity__button_minus _icon-minus"></div>
+										<div class="quantity__input">
+											<input autocomplete="off" type="text" name="form[]" value="1">
+										</div>
+										<div class="quantity__button quantity__button_plus _icon-plus"></div>
+									</div>
+									<strong class="cart-item__price">15 000 грн</strong>
+								</div>
+							</div>
+						</div>	
+					</div>
+
+					<div class="page-cart__item cart-item">
+						<div class="cart-item__content">
+							<div class="cart-item__preview">
+								<div class="cart-item__image-ibg">
+									<img src="img/girls/girls-04.jpeg" alt="Party Go">
+								</div>
+							</div>
+							<div class="cart-item__text">
+								<h4 class="cart-item__head">
+									<span>Оренда яхти</span>
+									<img src="img/interface/close.svg" alt="Party Go">
+								</h4>
+
+								<div data-spollers class="spollers">
+									<div class="spollers__item">
+										<button type="button" data-spoller class="spollers__title">
+											<span>Список послуг</span>
+											<img data-src="img/interface/shevron.svg" data-inline-svg alt="Party Go">
+										</button>
+										<div class="spollers__body">
+											<ul>
+												<li>Прогулянка на катері</li>
+												<li>Вечеря в ресторані</li>
+												<li>Відвідини нічного клубу</li>
+												<li>Майстер-клас по танцям</li>
+												<li>Мейк-ап від візажиста</li>
+												<li>Образ від стиліста</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="cart-item__controls">
+									<div class="quantity">
+										<div class="quantity__button quantity__button_minus _icon-minus"></div>
+										<div class="quantity__input">
+											<input autocomplete="off" type="text" name="form[]" value="1">
+										</div>
+										<div class="quantity__button quantity__button_plus _icon-plus"></div>
+									</div>
+									<strong class="cart-item__price">15 000 грн</strong>
+								</div>
+							</div>
+						</div>	
+					</div>
+					
+
+				</div>
+				<div class="page-cart__bottom">
+					<div class="page-cart__price">
+						<span>ЗАГаЛЬНА ВАРТІСТЬ:</span>
+						<span>17 800 грн</span>
+					</div>
+					<div class="page-cart__actions">
+						<a href="girls-filter.html" class="service-btn">ДоДАТИ ПОСЛУГИ</a>
+						<a href="ordering.html" class="order-btn">ОФоРМИТИ ЗАМОВЛЕННЯ</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+    </div>
+</div>

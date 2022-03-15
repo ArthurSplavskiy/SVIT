@@ -1,0 +1,52 @@
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+
+    &_white {
+        color: $white!important;
+
+        li:not(:last-child):after {
+            background: $white;
+        }
+    }
+    &_green {
+
+        li:not(:last-child):after {
+           // background: $bay-leaf;
+        }
+    }
+
+	&__list {
+		overflow-x: auto;
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+
+		li {
+            display: flex;
+			align-items: center;
+
+            &:not(:last-child) {
+                position: relative;
+                margin-right: 8px;
+                display: flex;
+                a {
+                    margin-right: 8px; 
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    width: rem(4);
+                    height: rem(4);
+                    border-radius: 100%;
+                }
+            }
+			span {
+				white-space: nowrap;
+			}
+            a {
+                white-space: nowrap;
+            }
+		}
+	}
+}

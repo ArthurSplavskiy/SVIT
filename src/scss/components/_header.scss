@@ -1,0 +1,198 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: rem(87);
+	background: $main-black;
+	z-index: z('header');
+	display: flex;	
+	transition: all $defaultTransition;
+	will-change: transform;
+
+	&._header-scroll {
+		transform: translate3d(0, -100%, 0);
+	}
+
+	@media (max-width: $tablet) {
+		min-height: rem(56);
+	}
+
+	& > * {
+		width: 100%;
+	}
+	
+	&__content {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		position: relative;
+
+		@media (max-width: $tablet) {
+			display: grid;
+			grid-template-columns: rem(42) 1fr rem(42);
+			gap: rem(24);
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+
+		@media (min-width: $tablet) and (max-width: 1200px) {
+			margin-right: rem(12);
+		}
+
+		@media (min-width: $tablet) {
+			margin-right: em(24);
+		}
+
+		@media (max-width: $tablet) {
+			display: grid;
+    		place-items: center;
+		}
+
+		a {
+			& > * {
+				width: rem(106);
+				vertical-align: middle;
+				@media (max-width: $tablet) {
+					width: rem(83);
+				}
+			}
+			svg path {
+				transition: fill $defaultTransition;
+			}
+			&:hover {
+				svg path {
+					fill: rgba($white, 0.9);
+				}
+			}
+		}
+	}
+
+	&__menu {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__search-trigger {
+		display: grid;
+		grid-template-columns: rem(24) auto;
+		gap: rem(8);
+		cursor: pointer;
+
+		@media(max-width: $tablet) {
+			display: none;
+		}
+
+		img, svg {
+			width: rem(24);
+		}
+		span {
+			@extend %sf16-14regular;
+			@include lh(26, 16, 20, 14);
+			@extend %neon-hover;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (min-width: $tablet) and (max-width: 1200px) {
+			margin-left: rem(12);
+		}
+
+		@media (min-width: $tablet) {
+			margin-left: rem(24);
+		}
+	}
+	&__language {
+		@extend %flex-center;
+
+		@media (min-width: $tablet) and (max-width: 1200px) {
+			margin-left: rem(12);
+		}
+
+		@media(min-width: $tablet) {
+			position: relative;
+			margin-left: rem(24);
+			&:before {
+				content: '';
+				display: block;
+				height: rem(32);
+				width: rem(1);
+				background: $white;
+				margin-right: rem(24);
+	
+				@media (min-width: $tablet) and (max-width: 1200px) {
+					margin-right: rem(12);
+					height: rem(24);
+				}
+			}
+		}
+
+		[data-spoller] {
+			text-transform: uppercase;
+
+			span {
+				@extend %neon-hover;
+			}
+		}
+
+		.spoller-absolute {
+			@extend %sf16-14regular;
+			@include lh(26, 16, 24, 14);
+		}
+	}
+	&__search-field {
+		@extend %flex-center;
+
+		@media (min-width: $tablet) {
+			background: $main-black;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: all $defaultTransition;
+		}
+
+		&.js-active {
+			pointer-events: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	.menu {
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(7, auto);
+			column-gap: em(48);
+			row-gap: em(8);
+
+			@media (min-width: $tablet) and (max-width: 1200px) {
+				font-size: rem(10);
+			}
+
+			& > li {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+			}
+			a {
+				@extend %sf16-14regular;
+				@include lh(26, 16, 20, 14);
+				@extend %neon-hover;
+			}
+		}
+	}
+}

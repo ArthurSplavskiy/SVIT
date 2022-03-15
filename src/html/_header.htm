@@ -1,0 +1,95 @@
+<header class="header">
+	<div class="header__container">
+		<div class="header__content">
+			@@include('_page-burger.htm', {})
+			<div class="header__logo">
+				<a href="index.html">
+					<img data-src="img/interface/logo.svg" data-inline-svg alt="svit">
+				</a>
+			</div>
+			<nav class="header__menu menu" data-da=".page-menu__menu, 992, 0">
+				<ul class="menu__list">
+					<li>
+						<a href="index.html" data-text="Головна">Головна</a>
+					</li>
+					<li>
+						<a href="switches.html" data-text="Вимикачі">Вимикачі</a>
+					</li>
+					<li>
+						<a href="smart-house.html" data-text="Розумний дім">Розумний дім</a>
+					</li>
+					<li>
+						<a href="gallery.html" data-text="Галерея">Галерея</a>
+					</li>
+					<li>
+						<a href="blog.html" data-text="Блог">Блог</a>
+					</li>
+					<li>
+						<a href="support.html" data-text="Підтримка">Підтримка</a>
+					</li>
+					<li>
+						<a href="contacts.html" data-text="Контакти">Контакти</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__actions">
+				<div class="header__search-trigger" data-search-trigger>
+					<img data-src="img/interface/search-ico.svg" data-inline-svg alt="svit">
+					<span data-text="пошук">пошук</span>
+				</div>
+				<div class="header__language" data-spollers>
+					<div class="spoller-absolute">
+						<div data-spoller>
+							<span data-text="ua">UA</span>
+							<img data-src="img/interface/shevron-ico.svg" data-inline-svg alt="Party Go">
+						</div>
+						<ul>
+							<li>
+								<a href="#">RU</a>
+							</li>
+							<li>
+								<a href="#">EN</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header__search-field" data-search-form data-da=".page-menu__search, 992, 0">
+				@@include('_search-form.htm', {})
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="page-menu" data-mobile-menu>
+	<div class="page-menu__container">
+		<div class="page-menu__content">
+			<div class="page-menu__search"></div>
+			<div class="page-menu__menu"></div>
+			<div class="page-menu__contacts">
+
+				<div class="page-contacts">
+					<div class="page-contacts__content">
+						<div class="page-contacts__phones">
+							<span>Зворотній зв’язок:</span>
+							<a href="tel:+380960302040">+380 96 030 20 40</a>
+							<a href="tel:+380960302040">+40 96 030 20 40</a>
+						</div>
+						<div class="page-contacts__email">
+							<span>Напишіть нам:</span>
+							<a href="mailto:+380960302040">svit_info@gmail.com</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+

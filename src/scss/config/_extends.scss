@@ -1,0 +1,232 @@
+// Шаблоны (заготовки)
+// @extend %имя шаблона;
+// Сниппет (SCSS): ex
+
+// Счетчик для списка
+%listCounter {
+	list-style-type: none;
+	counter-reset: item;
+	li {
+		position: relative;
+		&:before {
+			counter-increment: item;
+			content: "0" counter(item); // "0" - add something
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+// Адаптивное видео
+%responsiveVideo {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 56.25%;
+	video,
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+// Видео в качестве фона
+%videoBackground {
+	video,
+	iframe,
+	object,
+	embed {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -100;
+		transform: translateX(-50%) translateY(-50%);
+		background-size: cover;
+	}
+}
+// Серый фильтр
+%grayfilter {
+	transition: all 0.3s ease 0s;
+	filter: grayscale(1);
+	&:hover {
+		filter: grayscale(0);
+	}
+}
+// Отменить выделение
+%noselect {
+	user-select: none;
+}
+// Зеркальное отображение
+%mirror {
+	transform: scale(-1, 1);
+}
+// Плавный скролл
+%smoothscroll {
+	-webkit-overflow-scrolling: touch;
+}
+// Скрыть скролл
+%hidescroll {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+%flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+%flex-sb {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+%absolute-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+%cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+%text-inherit {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+}
+%neon-hover {
+	position: relative;
+	color: $white;
+
+	&:before {
+		content: attr(data-text);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all $defaultTransition;
+	}
+
+	&:hover {
+		text-shadow: 0 0 1px $primary2;
+
+		&:before {
+			color: $primary2;
+			text-shadow: 0 0 3px $primary2;
+		}
+	}
+}
+
+// * * * Fonts
+%hn32-16regular {
+	font-family: $defaultFontFamily;
+	font-size: rem(32);
+	font-weight: 400;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(16);
+	}
+}
+%hn80-24regular {
+	font-family: $defaultFontFamily;
+	font-size: rem(80);
+	line-height: 100%;
+	font-weight: 400;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(24);
+	}
+}
+
+
+%sf9regular {
+	font-family: $secondFontFamily;
+	font-size: rem(9);
+	font-weight: 400;
+}
+%sf11regular {
+	font-family: $secondFontFamily;
+	font-size: rem(11);
+	font-weight: 400;
+}
+%sf12regular {
+	font-family: $secondFontFamily;
+	font-size: rem(12);
+	font-weight: 400;
+}
+%sf14regular {
+	font-family: $secondFontFamily;
+	font-size: rem(14);
+	font-weight: 400;
+}
+%sf14-12regular {
+	font-family: $secondFontFamily;
+	font-size: rem(14);
+	font-weight: 400;
+	line-height: 100%;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(12);
+	}
+}
+%sf16-10regular {
+	font-family: $secondFontFamily;
+	font-size: rem(16);
+	font-weight: 400;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(10);
+	}
+}
+%sf16-12regular {
+	font-family: $secondFontFamily;
+	font-size: rem(16);
+	font-weight: 400;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(12);
+	}
+}
+%sf16-14regular {
+	font-family: $secondFontFamily;
+	font-size: rem(16);
+	font-weight: 400;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(14);
+	}
+}
+%sf18-14regular {
+	font-family: $secondFontFamily;
+	font-size: rem(18);
+	font-weight: 400;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(14);
+	}
+}
+%sf18-14medium {
+	font-family: $secondFontFamily;
+	font-size: rem(18);
+	font-weight: 500;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(14);
+	}
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Sitemap</title>
+		<meta name="description" content="Party Go">
+		<meta name="keywords" content="Party Go, Description">
+		<meta property="og:locale" content="[locale]" />
+		<meta property="og:title" content="Party Go" />
+		<meta property="og:description" content="Party" />
+		<meta property="og:url" content="[url]" />
+		<meta property="og:image" content="img/favicons/opengraph.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+		<meta name="twitter:card" content="summary_large_image"/>
+		<!-- <link type="image/x-icon" rel="shortcut icon" href="img/favicons/favicon-ico-258x258.ico"> -->
+		<link type="image/png" sizes="16x16" rel="icon" href="img/favicons/favicon-16x16.png">
+		<link type="image/png" sizes="32x32" rel="icon" href="img/favicons/favicon-32x32.png">
+		<link type="image/png" sizes="48x48" rel="icon" href="img/favicons/favicon-48x48.png">
+		<link sizes="180x180" rel="apple-touch-icon" href="img/favicons/apple-touch-icon-180x180.png">
+		<link color="#088ECB" rel="mask-icon" href="img/favicons/safari-pinned-tab-16x16.svg">
+		<meta name="msapplication-TileColor" content="#088ECB">
+		<meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+		<meta name="application-name" content="Site Name">
+		<meta name="theme-color" content="#000000">
+		<meta name="msapplication-config" content="others/browserconfig.xml">
+		<link rel="manifest" crossorigin="use-credentials" href="others/manifest.json">
+		<style>
+			.preloader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 9999;
+				background-color: #DFC4C1;
+				transition: opacity 0.5s ease;
+				pointer-events: none;
+			}
+			html.loaded .preloader {
+				opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="preloader"></div>
+		<div class="rootpage">
+			<h1>Front-end «Party Go»</h1>
+			<h6>Готові сторінки:</h6>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="index.html">Головна</a></li>
+				<li><a target="_blank" href="boys.html">Boys</a></li>
+				<li><a target="_blank" href="girls.html">Girls</a></li>
+				<li><a target="_blank" href="corporates.html">Corporates</a></li>
+				<li><a target="_blank" href="boys-filter.html">Boys filter</a></li>
+				<li><a target="_blank" href="girls-filter.html">Girls filter</a></li>
+				<li><a target="_blank" href="corp-filter.html">Corp filter</a></li>
+				<li><a target="_blank" href="constructor.html">Constructor</a></li>
+				<li><a target="_blank" href="product-card.html">Product card</a></li>
+				<li><a target="_blank" href="package-card.html">Package card</a></li>
+				<li><a target="_blank" href="package-card-boys.html">Package card boys</a></li>
+				<li><a target="_blank" href="package-card-corp.html">Package card corp</a></li>
+				<li><a target="_blank" href="single-tip.html">Single Tip</a></li>
+				<li><a target="_blank" href="tips.html">Tips</a></li>
+				<li><a target="_blank" href="ordering.html">Order</a></li>
+				<li><a target="_blank" href="thanks.html">Thanks</a></li>
+				<li><a target="_blank" href="contacts.html">Contacts</a></li>
+				<li><a target="_blank" href="404.html">404</a></li>
+				<li><a target="_blank" href="privacy-policy.html">Pryvacy Policy</a></li>
+				<li><a target="_blank" href="account-enter.html">Accound Enter</a></li>
+				<li><a target="_blank" href="account-forgot-pass.html">Account Forgot Password</a></li>
+				<li><a target="_blank" href="account-new-pass.html">Account New Password</a></li>
+				<li><a target="_blank" href="account-profile.html">Account Profile</a></li>
+				<li><a target="_blank" href="account-profile-edit.html">Account Profile Edit</a></li>
+				<li><a target="_blank" href="account-registration.html">Account Registration</a></li>
+			</ol>
+			<h6>Попапи:</h6>
+			<ol class="rootpage__list">
+				<li><a data-popup-link="[data-popup='cartPopup']" href="">Cart</a></li>
+				<li><a data-popup-link="[data-popup='buyPopup']" href="">Buy</a></li>
+				<li><a data-popup-link="[data-popup='callbackPopup']" href="">Callback</a></li>
+			</ol>
+		</div>
+		<!-- $$INCLUDE 'html/_popup.htm' -->
+		<!-- $$INCLUDE 'html/_js.htm' -->
+		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{})
+	</body>
+	
+	<style>
+		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+		* ,*::before, *::after {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+			box-sizing: border-box; 
+		}
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			min-width: 320px;
+			width: 100%;
+			color: #fff;
+			background-color: #5e5373;
+		}
+		body {
+			font-family: Montserrat;
+			font-size: 100%;
+			line-height: 1;
+			font-size: 1rem;
+		}
+		a {
+			text-decoration: underline;
+			color: #fff;
+		}
+		a:visited {
+			text-decoration: underline;
+			color: #aaa768;
+		}
+			a:hover {
+			text-decoration: none;
+		}
+		ul li {
+			list-style: none;
+		}
+		img {
+			vertical-align: top;
+		}
+		.wrapper {
+			width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+		}
+		.rootpage{
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		@media (max-width: 767px) {
+			.rootpage{
+				padding:30px 15px;
+			}
+		}
+		h1 {
+			color: #fff;
+			font-size: 2.5rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+		@media (max-width: 767px) {
+			h1 {
+				font-size: 1.85rem;
+				margin: 0px 0px 1.25rem 0px;
+			}
+		}
+		h6 {
+			color: #fff;
+			font-size: 1.25rem;
+			margin: 0px 0px 1rem 0px;
+		}
+		@media (max-width: 767px) {
+			 h6 {
+				font-size: 1.125rem;
+				margin: 0px 0px 1rem 0px;
+			}
+		}
+		.rootpage__info{
+			line-height: 140%;
+			margin: 0px 0px 1.5rem 0px;
+		}
+
+		.rootpage__list{
+			margin: 0px 0px 2.25rem 1.25rem;
+		}
+		.rootpage__list li:not(:last-child){
+			margin: 0px 0px 15px 0px;
+		}
+		.rootpage__contacts,
+		.rootpage__tnx{
+			border-radius: 200px;
+			padding: 20px 65px;
+			line-height: 140%;
+		}
+		@media (max-width: 767px){
+		.rootpage__contacts,
+		.rootpage__tnx{
+			border-radius:40px;
+			padding: 20px;
+		}
+		}
+		.rootpage__contacts{
+			background: #32b5a4;
+			
+		}
+		.rootpage__contacts a{
+			color: #fff;
+		}
+		.rootpage__tnx{
+			background: #c22d63;
+			margin: 0px 0px 1rem 0px;
+		}
+	</style>
+</html>

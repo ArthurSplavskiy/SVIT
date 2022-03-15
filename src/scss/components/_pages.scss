@@ -1,0 +1,10 @@
+.page {
+
+    &_home {
+        #canvas-main {
+            @media(max-width: $tablet) {
+                display: none;
+            }
+        }
+    }
+}

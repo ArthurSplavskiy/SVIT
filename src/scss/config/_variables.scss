@@ -1,0 +1,70 @@
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+// * * * Default font
+$defaultFontFamily: "Helvetica", Arial, Helvetica, sans-serif;
+$secondFontFamily: "SF", Arial, Helvetica, sans-serif;
+
+$fontSize: rem(16); // где 16(px) - размер шрифта по умолчанию из макета
+
+// * * * Settings
+// * Page minimal width
+$minWidth: 320;
+// * Frame width (maket)
+$maxWidth: 1440;
+// * Page container width (0 = without container)
+$maxWidthContainer: 1248;
+$maxWidthContainerPX: 1248px;
+// * Container padding
+// (30 = 15px left and right, 0 = without padding)
+$containerPadding: 48;
+// * Adaptive type:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+// Ширина страбатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding; // 1256
+// * Breakpoinds
+$fullHd: em(1920);
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+// * * * Colors
+// * Main text color
+$white: #fff;
+$black: #000;
+$main-black: #181A1E;
+$main-grey: #40444E;
+$primary: #7A0CA0;
+$primary2: #A121CE;
+$primay-light: #C2A2EB;
+$primary-disabled: #E0D3F0;
+$linear: linear-gradient(114.06deg, rgba(250, 0, 255, 0.5) 3.83%, rgba(22, 29, 193, 0.5) 87.12%);
+$linear-light: linear-gradient(114.06deg, rgba(234, 174, 235, 0.5) 3.83%, rgba(152, 156, 242, 0.5) 87.12%);
+$grey: #4D515B;
+$medium-grey: #7F828A;
+$light-grey: #C2C3C8;
+$red: #EA3C24;
+
+
+// * Blur
+$blurValue: 69px;
+$blurValue2: 140px;
+
+// * trabsition
+$defaultTransition: 0.3s ease;
+
+// * z-indexes
+$z-indexes: (
+  'header',
+  'page-menu',
+  'wrapper',
+  'page-bg'
+);

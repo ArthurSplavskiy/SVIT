@@ -1,0 +1,8 @@
+#canvas-main {
+    @extend %absolute-center;
+    width: 650px;
+    height: 100vh;
+    max-height: 800px;
+    cursor: grab;
+    overflow: hidden;
+}

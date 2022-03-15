@@ -1,0 +1,21 @@
+<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_1417_13344)">
+<path d="M42.9761 3.07508L15.8853 9.90577L14.7558 9.90526L14.7699 33.4282C3.0276 31.37 2.35335 36.559 3.48402 39.4108C9.81007 45.9145 17.0331 42.1256 19.8538 39.4182L19.8399 16.3229L39.5938 11.6273L39.6025 26.1688C24.2475 24.1089 25.3049 30.1541 27.7529 33.4342C34.0777 37.885 40.5489 34.7231 42.9938 32.5857L42.9761 3.07508Z" stroke="white" stroke-width="0.916853"/>
+</g>
+<g filter="url(#filter1_f_1417_13344)">
+<path d="M42.9761 3.07508L15.8853 9.90577L14.7558 9.90526L14.7699 33.4282C3.0276 31.37 2.35335 36.559 3.48402 39.4108C9.81007 45.9145 17.0331 42.1256 19.8538 39.4182L19.8399 16.3229L39.5938 11.6273L39.6025 26.1688C24.2475 24.1089 25.3049 30.1541 27.7529 33.4342C34.0777 37.885 40.5489 34.7231 42.9938 32.5857L42.9761 3.07508Z" stroke="white" stroke-width="0.916853"/>
+</g>
+<path d="M42.9761 3.07508L15.8853 9.90577L14.7558 9.90526L14.7699 33.4282C3.0276 31.37 2.35335 36.559 3.48402 39.4108C9.81007 45.9145 17.0331 42.1256 19.8538 39.4182L19.8399 16.3229L39.5938 11.6273L39.6025 26.1688C24.2475 24.1089 25.3049 30.1541 27.7529 33.4342C34.0777 37.885 40.5489 34.7231 42.9938 32.5857L42.9761 3.07508Z" stroke="white" stroke-width="0.458427"/>
+<defs>
+<filter id="filter0_f_1417_13344" x="0.804538" y="0.652865" width="44.4816" height="44.643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.916853" result="effect1_foregroundBlur_1417_13344"/>
+</filter>
+<filter id="filter1_f_1417_13344" x="0.804538" y="0.652865" width="44.4816" height="44.643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.916853" result="effect1_foregroundBlur_1417_13344"/>
+</filter>
+</defs>
+</svg>
