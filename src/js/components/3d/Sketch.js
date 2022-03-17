@@ -1,3 +1,5 @@
+//import { bodyLockStatus, bodyLockToggle } from '../../core/utils/functions.js'
+
 export default class Sketch {
     constructor (options) {
         this.container = options.domElement
@@ -174,6 +176,9 @@ export default class Sketch {
         })
         modelMotionTimeline.call(_ => {
             this.fadeElement.classList.add('show')
+            // if (bodyLockStatus) {
+            //     bodyLockToggle()
+            // }
         })
     }
 

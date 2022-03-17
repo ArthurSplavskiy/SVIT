@@ -21,8 +21,14 @@
         0% {
             opacity: 0;
         }
-        65% {
+        25% {
+            opacity: 0.6;
+        }
+        50% {
             opacity: 1;
+        }
+        75% {
+            opacity: 0.65;
         }
         100% {
             opacity: 0;
@@ -31,7 +37,7 @@
     .page-preloader svg g {
         animation: blink 4s ease-out infinite forwards;
     }
-    html.loaded .preloader:not([data-preloader]) {
+    html.loaded .page-preloader:not([data-preloader]) {
         opacity: 0;
     }
     @media(max-width: 992px) {

@@ -2,17 +2,10 @@
 	display: flex;
 	align-items: center;
 
-    &_white {
-        color: $white!important;
-
-        li:not(:last-child):after {
-            background: $white;
-        }
-    }
-    &_green {
-
-        li:not(:last-child):after {
-           // background: $bay-leaf;
+    &__container {
+        margin-bottom: rem(48);
+        @media(max-width: $tablet) {
+            margin-top: rem(16);
         }
     }
 
@@ -23,6 +16,8 @@
 		flex-wrap: nowrap;
 
 		li {
+            @extend %sf16-14regular;
+            @include lh(24, 16, 20, 14);
             display: flex;
 			align-items: center;
 
@@ -30,15 +25,19 @@
                 position: relative;
                 margin-right: 8px;
                 display: flex;
+                span {
+                    color: $light-grey;
+                }
                 a {
                     margin-right: 8px; 
                 }
                 &:after {
                     content: '';
                     display: block;
-                    width: rem(4);
-                    height: rem(4);
-                    border-radius: 100%;
+                    width: rem(18);
+                    height: rem(18);
+                    background-image: url('../img/interface/bc-arrow-ico.svg');
+                    background-repeat: no-repeat;
                 }
             }
 			span {

@@ -6,7 +6,7 @@
 	min-height: rem(87);
 	background: $main-black;
 	z-index: z('header');
-	display: flex;	
+	display: flex;
 	transition: all $defaultTransition;
 	will-change: transform;
 
@@ -111,6 +111,7 @@
 			margin-left: rem(24);
 		}
 	}
+
 	&__language {
 		@extend %flex-center;
 
@@ -149,6 +150,7 @@
 			@include lh(26, 16, 24, 14);
 		}
 	}
+
 	&__search-field {
 		@extend %flex-center;
 
@@ -192,6 +194,81 @@
 				@extend %sf16-14regular;
 				@include lh(26, 16, 20, 14);
 				@extend %neon-hover;
+			}
+		}
+	}
+}
+
+.header-block {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	background: $main-black;
+	z-index: z('header');
+
+	.header {
+		position: relative;
+		will-change: auto;
+	}
+	.submenu {
+		background: $white;
+		padding: rem(24) 0;
+		@media (max-width: $tablet) {
+			padding: rem(16) 0;
+		}
+
+		&__slider {
+			overflow: visible!important;
+		}
+		&__swiper {
+			justify-content: space-between;
+		}
+		&__slide {
+			width: auto!important;
+		}
+		&__link {
+			color: $black;
+			display: grid;
+			grid-template-columns: rem(32) auto;
+			gap:rem(8);
+			align-items: center;
+			transition: all $defaultTransition;
+			cursor: pointer;
+			@media (max-width: $tablet) {
+				grid-template-columns: 1fr;
+				place-items: center;
+				gap:rem(4);
+			}
+			img, svg {
+				width: rem(32);
+				@media (max-width: $tablet) {
+					width: rem(24);
+				}
+			}
+			svg path {
+				transition: fill $defaultTransition;
+			}
+			span {
+				@extend %sf14-10regular;
+				@include lh(26, 14, 12, 10);
+			}
+
+			&._disable {
+				pointer-events: none;
+				color: $light-grey;
+				svg path {
+					fill: $light-grey;
+				}
+			}
+
+			&:hover {
+				color: $primary2;
+				svg path {
+					fill: $primary2;
+				}
 			}
 		}
 	}

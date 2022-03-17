@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+		"title":"SVIT - Вимикачі"
+	})
+	<body>
+		@@include('html/_preloader-markup.htm',{})
+		@@include('html/_page-bg.htm',{})
+		<div class="wrapper">
+			@@include('html/_header-submenu.htm',{})
+			<main class="page page_switches">
+
+				<div class="breadcrumbs__container">
+					@@include('html/_breadcrumbs.htm',{
+						"current": "Вимикачі"
+					})
+				</div>
+
+				<section class="page-section">
+					<div class="page-section__container">
+						<div class="page-section__content">
+							<div class="page-section__head">
+								<h2>Svit продукти</h2>
+								<div class="page-section__animline" data-scroll></div>
+							</div>
+							<div class="page-section__body">
+								<div class="page-section__descr">
+									<h3>Smart in use <br> Smart in everything</h3>
+									<p>
+										Ви можете керувати вашими приладами дистанційно та створювати власні унікальні сценарії роботи Розумного будинку. 
+									</p>
+								</div>
+							</div>
+
+							<article class="page-preview" data-hover-parent>
+								<div class="page-preview__content">
+									<div class="page-preview__image-ibg">
+										<img data-src="img/01.jpeg" data-lazy alt="svit">
+									</div>
+									<span>Touch swich</span>
+									<p>Smart in use - smart in everything</p>
+									<a href="@@link" data-hover-target class="page-btn">Переглянути</a>	
+									<div class="page-preview__bg"></div>						
+								</div>
+							</article>
+
+							<article class="page-preview" data-hover-parent>
+								<div class="page-preview__content">
+									<div class="page-preview__image-ibg">
+										<img data-src="img/02.jpeg" data-lazy alt="svit">
+									</div>
+									<span>Room control</span>
+									<p>Control your room</p>
+									<a href="@@link" data-hover-target class="page-btn">Переглянути</a>	
+									<div class="page-preview__bg"></div>						
+								</div>
+							</article>
+
+							<article class="page-preview" data-hover-parent>
+								<div class="page-preview__content">
+									<div class="page-preview__image-ibg">
+										<img data-src="img/03.jpeg" data-lazy alt="svit">
+									</div>
+									<span>Soft swich</span>
+									<p>Smart in use - smart in everything</p>
+									<a href="@@link" data-hover-target class="page-btn">Переглянути</a>	
+									<div class="page-preview__bg"></div>						
+								</div>
+							</article>
+
+						</div>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/_footer.htm',{})
+			@@include('html/_js.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+	</body>
+</html>

@@ -49,7 +49,7 @@ h3 {
 .page {
 	min-width: 0;
 	margin-top: rem(191);
-	@media(max-width: $mobileSmall) {
+	@media(max-width: $tablet) {
 		margin-top: rem(144);
 	}
 }
