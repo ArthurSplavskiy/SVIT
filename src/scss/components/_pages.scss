@@ -8,6 +8,15 @@
         }
     }
     &_smart-panel {
+        .pin-spacer {
+            & + .page-video {
+                margin-top: rem(64);
+                margin-bottom: rem(180);
+                @media(max-width: $tablet) {
+                    margin-bottom: rem(88);
+                }
+            }
+        }
         .page-titers {
             margin-top: rem(180);
             @media(max-width: $tablet) {

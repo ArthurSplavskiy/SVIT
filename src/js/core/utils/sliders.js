@@ -191,7 +191,7 @@ function initModelSlider() {
 	ScrollTrigger.create({
 		animation: modelSliderTimeline,
 		trigger: '.model-slider',
-		start: 'top 100px',
+		start: 'top 142px',
 		end: '+=2500',
 		pin: true,
 		scrub: 1
@@ -201,12 +201,16 @@ function initModelSlider() {
 		const modelImage = item.querySelector('.model-slide__model')
 		const modelText = item.querySelector('.model-slide__text')
 
-		modelSliderTimeline.to(modelImage, {
-			opacity: 1,
-		})
-		modelSliderTimeline.to(modelText, {
-			opacity: 1,
-		}, '<')
+		if(index !== 0) {
+			modelSliderTimeline.to(modelImage, {
+				opacity: 1,
+			})
+		}
+		if(index !== 0) {
+			modelSliderTimeline.to(modelText, {
+				opacity: 1,
+			}, '<')
+		}
 		if(index !== 4) {
 			modelSliderTimeline.to(modelText, {
 				opacity: 0,

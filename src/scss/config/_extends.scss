@@ -143,6 +143,15 @@
 		font-size: rem(14);
 	}
 }
+%hn20-16regular {
+	font-family: $defaultFontFamily;
+	font-size: rem(20);
+	font-weight: 400;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(16);
+	}
+}
 %hn32-16regular {
 	font-family: $defaultFontFamily;
 	font-size: rem(32);
@@ -206,6 +215,11 @@
 	font-family: $secondFontFamily;
 	font-size: rem(12);
 	font-weight: 400;
+}
+%sf14light {
+	font-family: $secondFontFamily;
+	font-size: rem(14);
+	font-weight: 200;
 }
 %sf14regular {
 	font-family: $secondFontFamily;
@@ -276,6 +290,24 @@
 	font-family: $secondFontFamily;
 	font-size: rem(18);
 	font-weight: 500;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(14);
+	}
+}
+%sf20-14regular {
+	font-family: $secondFontFamily;
+	font-size: rem(20);
+	font-weight: 400;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(14);
+	}
+}
+%sf24-14regular {
+	font-family: $secondFontFamily;
+	font-size: rem(24);
+	font-weight: 400;
 
 	@media(max-width: $mobileSmall) {
 		font-size: rem(14);
