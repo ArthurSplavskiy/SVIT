@@ -125,6 +125,7 @@
         }
     }
 
+
     &__content {
         &.show {
             .page-section__animline {
@@ -170,6 +171,33 @@
 
         &-min {
             max-width: rem(488);
+            margin-bottom: rem(80);
+            @media(max-width: $tablet) {
+                margin-bottom: rem(56);
+            }
+            h3 {
+                @extend %hn56-24regular;
+                @include lh(60, 56, 24, 24);
+                &:not(:last-child) {
+                    margin-bottom: rem(40);
+                    @media(max-width: $mobileSmall) {
+                        margin-bottom: rem(12);
+                    }
+                }
+                @media(max-width: $mobileSmall) {
+                    text-align: center;
+                }
+            }
+            p {
+                @extend %sf16-14regular;
+                @include lh(26, 16, 24, 14);
+                @media(max-width: $mobileSmall) {
+                    text-align: center;
+                }
+            }
+        }
+        &-middle {
+            max-width: rem(552);
             margin-bottom: rem(80);
             @media(max-width: $tablet) {
                 margin-bottom: rem(56);
@@ -316,6 +344,14 @@
             }
         }
     }
+    &__sticky {
+        position: sticky;
+        top: 0;
+
+        .page-section__image-ibg {
+            height: 100vh;
+        }
+    }
 
     &_right {
         .page-section__head {
@@ -354,6 +390,34 @@
             @media(max-width: $mobile) {
                 flex-direction: column-reverse;
             }   
+        }
+    }
+    &_bg {
+        @include adaptiveValue('min-height', 740, 320, 1);
+        padding: rem(80) 0 rem(64) 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        margin-top: rem(48)!important;
+        @media(max-width: $mobileSmall) {
+            margin-top: rem(32)!important;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(101.69deg, #17171D 1.69%, rgba(12, 12, 14, 0.765625) 25.75%, rgba(30, 31, 43, 0.578125) 44.99%, rgba(255, 255, 255, 0) 104.33%);
+        }
+
+        .page-section__container {
+            position: relative;
+            z-index: 2;
         }
     }
 }
@@ -534,8 +598,13 @@
     }
     .btn-play {
         @extend %absolute-center;
-        @media(max-width: $mobile) {
-           display: none;
+        // @media(max-width: $mobile) {
+        //    display: none;
+        // }
+
+        &_black {
+            background: $main-black;
+            color: $white;
         }
     }
 }
@@ -550,6 +619,12 @@
     background: $white;
     transition: all $defaultTransition;
     color: $main-black;
+
+    @media(max-width: $mobileSmall) {
+        font-size: rem(10);
+        width: rem(80);
+        height: rem(80);
+    }
 
     &:hover {
         color: $white;
@@ -1201,6 +1276,314 @@
 
         @media(max-width: $tablet) {
             display: none;
+        }
+    }
+}
+
+.page-chess {
+    overflow: hidden;
+    @media(min-width: $mobile) {
+        border-radius: rem(10);
+    }
+    @media(max-width: $mobile) {
+        width: 100vw;
+        margin-left: rem(-24);
+    }
+    &__row {
+        display: flex;
+
+        @media(max-width: $mobile) {
+            flex-direction: column;
+            &:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    &__item {
+        @include adaptiveValue('height', 720, 320, 1);
+        width: 50%;
+        max-height: rem(720);
+
+        @media(max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    .item-text {
+        @extend %flex-center;
+
+        @media(max-width: $mobile) {
+            height: auto!important;
+        }
+
+        @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(30px);
+		}
+
+        &__content {
+            max-width: rem(536);
+            padding: rem(24);
+        }
+        &__icon {
+            display: block;
+            margin-bottom: rem(40);
+            max-width: rem(32);
+            @media(max-width: $mobileSmall) {
+                margin: 0 auto rem(24) auto;
+            }
+            path {
+                fill: $white;
+            }
+        }
+        &__number {
+            @extend %hn120-24regular;
+            display: block;
+            -webkit-text-stroke: 2px $white;
+            color: transparent;
+            margin-bottom: rem(40);
+            @media(max-width: $mobileSmall) {
+                margin-bottom: rem(18);
+                text-align: center;
+            }
+        }
+
+        h2 {
+            @extend %hn56-20regular;
+            @include lh(60, 56, 24, 20);
+            margin-bottom: rem(40);
+            @media(max-width: $mobileSmall) {
+                text-align: center;
+                margin-bottom: rem(24);
+            }
+        }
+        h3 {
+            @extend %hn32-20regular;
+	        @include lh(40, 32, 24, 20);
+            margin-bottom: rem(40);
+            @media(max-width: $mobileSmall) {
+                text-align: center;
+                margin-bottom: rem(8);
+            }
+        }
+        p {
+            @extend %sf16-14regular;
+            @include lh(26, 16, 24, 14);
+
+            @media(max-width: $mobileSmall) {
+                text-align: center;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(24);
+                @media(max-width: $mobileSmall) {
+                    margin-bottom: rem(16);
+                }
+            }
+        }
+    }
+    .item-img {
+        &__image-ibg {
+            height: 100%;
+        }
+    }
+}
+
+.page-manage {
+    .page-icon {
+        margin-bottom: rem(32);
+        @media(max-width: $mobileSmall) {
+            margin-bottom: rem(24);
+        }
+    }
+    .page-icon__icon {
+        margin: 0;
+    }
+    &__item {
+        max-width: rem(768);
+        &:not(:last-child) {
+            padding-bottom: rem(40);
+            border-bottom: 1px solid #575759;
+            margin-bottom: rem(40);
+            @media(max-width: $mobileSmall) {
+                padding-bottom: rem(16);
+                margin-bottom: rem(32);
+            }
+        }
+        .spollers__title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            @extend %hn32-20regular;
+	        @include lh(40, 32, 24, 20);
+            margin-bottom: rem(16);
+
+            &._spoller-active {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                width: rem(20);
+                height: rem(20);
+                background: url('../img/interface/shevron-ico.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: transform $defaultTransition;
+                @media(min-width: $mobile) {
+                    display: none;
+                }
+            }
+        }
+        .spollers__body {
+            @extend %sf14regular;
+            line-height: math.div(24, 14);
+            @media(min-width: $mobile) {
+                display: block!important;
+            }
+        }
+    }
+}
+
+.page-photo {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: rem(48) 0 rem(56) 0;
+    margin-top: rem(180);
+    @media(max-width: $tablet) {
+        margin-top: rem(112);
+    }
+    @media(max-width: $mobileSmall) {
+        background: none!important;
+        padding: 0;
+    }
+    @media(min-width: $mobileSmall) {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(#1B1420, 0.6);
+            z-index: 1;
+        }
+    }
+
+    &__image-ibg {
+        padding-bottom: 57%;
+        position: relative;
+        width: 100vw;
+        margin-left: rem(-24);
+        min-height: rem(320);
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(#1B1420, 0.6);
+            z-index: 1;
+        }
+
+        @media(min-width: $mobileSmall) {
+            display: none;
+        }
+    }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-columns: repeat(3, rem(120));
+        gap: rem(42);
+        margin-left: rem(23);
+        margin-top: rem(200);
+
+        @media(max-width: $mobileSmall) {
+            margin-top: rem(28);
+            margin-left: rem(8);
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__icon {
+        @extend %flex-center;
+        width: rem(64);
+        height: rem(64);
+        background: $white;
+        border-radius: 100%;
+        position: relative;
+        cursor: pointer;
+
+        @media(max-width: $mobileSmall) {
+            width: rem(48);
+            height: rem(48);
+        }
+
+        img, svg {
+            width: rem(48);
+            height: rem(48);
+            position: relative;
+            z-index: 2;
+
+            @media(max-width: $mobileSmall) {
+                width: rem(24);
+                height: rem(24);
+            }
+        }
+        &:before {
+            content: '';
+            width: rem(87);
+            height: rem(87);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: rgba($white, 0.4);
+            border: 1px solid transparent;
+            transition: all $defaultTransition 0.1s;
+            z-index: 1;
+            @media(max-width: $mobileSmall) {
+                width: rem(64);
+                height: rem(64);
+            }
+        }
+        &:after {
+            content: '';
+            width: rem(110);
+            height: rem(110);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: rgba($white, 0.2);
+            border: 1px solid transparent;
+            transition: all $defaultTransition 0.2s;
+            z-index: 1;
+            @media(max-width: $mobileSmall) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            &:after, &:before {
+                background: transparent;
+                border-color: $white;
+            }
         }
     }
 }

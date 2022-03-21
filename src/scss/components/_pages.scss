@@ -31,4 +31,12 @@
             }
         }
     }
+    &_room-control {
+        .page-video {
+            margin-top: rem(180);
+            @media(max-width: $tablet) {
+                margin-top: rem(96);
+            }
+        }
+    }
 }
