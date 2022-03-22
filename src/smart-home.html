@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+		"title":"SVIT - Smart home"
+	})
+	<body>
+		@@include('html/_preloader-markup.htm',{})
+		@@include('html/_page-bg.htm',{})
+		<div class="wrapper">
+			@@include('html/_header-submenu.htm',{})
+			<main class="page page_smart-home">
+
+				<section class="page-section" style="background-image: url('img/05.jpeg');">
+					<div class="page-section__container">
+
+						<nav class="breadcrumbs">
+							<ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+							  <li itemscope itemtype="http://schema.org/ListItem">
+								<a class="breadcrumbs__link" itemprop="item" href="index.html">
+								  <img src="img/interface/home-ico.svg" alt="svit">
+								</a>
+								<meta itemprop="position" content="1"/>
+							  </li>
+							  <li itemscope itemtype="http://schema.org/ListItem">
+								<a class="breadcrumbs__link" itemprop="item" href="index.html">Вимикачі</a>
+								<meta itemprop="position" content="2"/>
+							  </li>
+							  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+								   <span class="breadcrumbs__link" itemprop="name">Smart home</span>
+								   <meta itemprop="position" content="3"/>
+							  </li>
+							</ul>
+						</nav>
+
+						<div class="page-section__content">
+							<div class="page-section__head">
+								<h2>Smart home</h2>
+								<div class="page-section__animline" data-scroll></div>
+							</div>
+							<div class="page-section__body">
+								<div class="page-section__descr">
+									<h3>
+										Smart in use <br> Smart in everything
+									</h3>
+									<p>
+										Ви можете керувати вашими приладами дистанційно та створювати власні унікальні сценарії роботи Розумного будинку.
+									</p>
+									<div class="page-section__anchor">
+										<a href="#next" class="page-anchor" data-anchor>
+											<img data-src="img/interface/anchor-ico.svg" data-inline-svg alt="svit">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div id="next" class="page-model">
+					<div class="page-model__container">
+						<div class="page-model__content">
+							<img src="img/model-2.png" data-scroll alt="svit">
+						</div>
+					</div>
+				</div>
+
+				<section class="page-section">
+					<div class="page-section__container">
+						<div class="page-section__content">
+							<div class="page-section__head-middle">
+								<h3>Переваги</h3>
+								<p>Основні елементи керування розумним будинком та його переваги. Опис та перелік функціоналу.</p>
+							</div>
+							<div class="page-section__body-max">
+
+								<div class="page-manage">
+									<div class="page-manage__item">
+										<div class="page-icon">
+											<div class="page-icon__icon">
+												<img src="img/interface/drop-ico.svg" alt="svit">
+											</div>
+										</div>
+										<div data-spollers="768" class="spollers">
+											<div class="spollers__item">
+												<button type="button" data-spoller class="spollers__title _spoller-active">Зручність</button>
+												<div class="spollers__body">
+													Для максимального комфорту мешканців будинку, розробники “розумного” комплексу передбачили можливість регулювання роботи повітроводів. За правильне виконання поставленого завдання відповідають повітряні клапани. Ці пристрої встановлюються на припливних і припливному – витяжних воздуховодах. Як тільки користувач запускає систему, клапан починає працювати. Зв’язок в даному випадку забезпечує вісь, що з’єднує елемент з електроприводом, підключеним до системи центрального управління «розумного будинку».
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="page-manage__item">
+										<div class="page-icon">
+											<div class="page-icon__icon">
+												<img src="img/interface/star-ico.svg" alt="svit">
+											</div>
+										</div>
+										<div data-spollers="768" class="spollers">
+											<div class="spollers__item">
+												<button type="button" data-spoller class="spollers__title">Керуй на відстані</button>
+												<div class="spollers__body">
+													Сучасні системи кліматичного контролю можуть охолоджувати, а також нагрівати приміщення. Також за допомогою кондиціонерів можна фільтрувати повітря або зволожувати його. “Розумний будинок” зможе виконувати контроль і регулювання роботи кожного окремого компонента спліт – системи. При цьому від власника буде потрібно мінімум уваги і сил.
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="page-manage__item">
+										<div class="page-icon">
+											<div class="page-icon__icon">
+												<img src="img/interface/wind-ico.svg" alt="svit">
+											</div>
+										</div>
+										<div data-spollers="768" class="spollers">
+											<div class="spollers__item">
+												<button type="button" data-spoller class="spollers__title">Економія часу</button>
+												<div class="spollers__body">
+													Для максимального комфорту мешканців будинку, розробники “розумного” комплексу передбачили можливість регулювання роботи повітроводів. За правильне виконання поставленого завдання відповідають повітряні клапани. Ці пристрої встановлюються на припливних і припливному – витяжних воздуховодах. Як тільки користувач запускає систему, клапан починає працювати.
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/_footer.htm',{})
+			@@include('html/_js.htm',{})
+		</div>
+	</body>
+</html>

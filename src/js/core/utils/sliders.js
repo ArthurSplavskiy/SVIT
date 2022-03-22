@@ -220,10 +220,27 @@ function initModelSlider() {
 	
 }
 
+function initSoftSlider() {
+	if(document.querySelector('.soft-slide')) {
+		gsap.utils.toArray('.soft-slide').forEach((panel, i, arr) => {
+			panel.style.zIndex = i
+			if(i !== arr.length - 1) {
+				ScrollTrigger.create({
+					trigger: panel,
+					start: 'top +=100', 
+					pin: true, 
+					pinSpacing: false,
+				});
+			}
+		});
+	}
+}
+
 window.addEventListener("load", function (e) {
 	// Запуск инициализации слайдеров
 	initSliders()
 	initModelSlider()
+	initSoftSlider()
 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });

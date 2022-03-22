@@ -53,7 +53,7 @@ h3 {
 		margin-top: rem(144);
 	}
 
-	&_soft {
+	&_soft, &_smart-home, &_soft-smart-home {
 		margin-top: rem(167);
 		@media(max-width: $tablet) {
 			margin-top: rem(142);

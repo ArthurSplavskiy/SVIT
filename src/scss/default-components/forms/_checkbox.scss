@@ -14,6 +14,7 @@
 
 .checkbox {
 	position: relative;
+	cursor: pointer;
 
 	&__input {
 		position: absolute;
@@ -22,27 +23,29 @@
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .icon-check {
-			background: url("../img/interface/checkbox.svg") center no-repeat;
+			//background: url("../img/interface/checkbox.svg") center no-repeat;
+			background: $white;
 		}
 	}
 	.icon-check {
 		content: "";
 		align-self: flex-start;
-		margin: 0px rem(20) 0px 0px;
-		flex: 0 0 18px;
+		margin: 0px rem(8) 0px 0px;
+		flex: 0 0 24px;
 		left: 0;
 		top: 0;
-		width: 18px;
-		height: 18px;
+		width: 24px;
+		height: 24px;
 		background: transparent;
-		border: 2px solid #000;
-		border-radius: 1px;
+		border: 1px solid $white;
+		border-radius: 100%;
 	}
 	&__text {
+		@extend %sf18regular;
+		line-height: math.div(24, 18);
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		color: #000;
 		cursor: pointer;
 		transition: border-color 0.3s ease;
 		&._error {
@@ -83,6 +86,9 @@
 		}
 	}
 	&__text {
+		@extend %sf18regular;
+		line-height: math.div(30, 18);
+		text-transform: uppercase;
 		display: inline-flex;
 		align-items: center;
 		position: relative;

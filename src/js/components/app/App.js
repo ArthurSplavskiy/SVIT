@@ -121,6 +121,41 @@ export default class App {
         }
 
         /*  
+            * Popup hidden input
+        */
+        const $productId = isTarget(targetElement, '[data-product-id]')
+        if($productId) {
+            const buyPopup = document.querySelector('[data-popup="buyPopup"]')
+            const popupInputHidden = buyPopup.querySelector('input[type="hidden"]')
+            const id = $productId.getAttribute('data-product-id')
+
+            if(id && popupInputHidden) {
+                popupInputHidden.value = id
+            }
+        }
+
+        /*  
+            * Price check
+        */
+        const $priceCheck = isTarget(targetElement, '[data-price-check]')
+        if($priceCheck) {
+            const $priceOptions = $priceCheck.closest('[data-price-options')
+            const $priceOut = $priceOptions.nextElementSibling
+            const $priceCheckboses = $priceOptions.querySelectorAll('[data-price-check]')
+
+            if($priceCheckboses) {
+                $priceCheckboses.forEach(checkbox => {
+                    checkbox.checked = false
+                })
+                $priceCheck.checked = true
+            }
+
+            if($priceCheck.dataset.value && $priceOut) {
+                $priceOut.textContent = $priceCheck.dataset.value
+            }
+        }
+
+        /*  
             * Video play
         */
         const $videoComponent = isTarget(targetElement, '[data-video]')
