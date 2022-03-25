@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="en">
 	@@include('html/_head.htm',{
 		"title":"Ooops page not found"
 	})
 	<body>
-		<div class="wrapper" id="page-top">
+		@@include('html/_preloader-markup.htm',{})
+		@@include('html/_page-bg-2.htm',{})
+		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page page-utils">
+			<main class="page page_not-found">
+
+				<div class="__container">
+					<img src="img/interface/neon-lamp-ico-1.svg" alt="svit">
+
+					<div>
+						<h1>404</h1>
+						<p>Здається, щось пішло не так...</p>
+						<a class="page-btn" href="index.html">Но головну</a>
+					</div>
+	
+					<img src="img/interface/neon-lamp-ico-2.svg" alt="svit">
+				</div>
 
 			</main>
 			@@include('html/_footer.htm',{})
 			@@include('html/_js.htm',{})
 		</div>
+		@@include('html/_popup.htm',{})
 	</body>
 </html>

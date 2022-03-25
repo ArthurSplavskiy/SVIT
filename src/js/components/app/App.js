@@ -29,8 +29,6 @@ export default class App {
     */
     domCalculate () {
     }
-    splitTextContent () {
-    }
 
 
 
@@ -76,48 +74,6 @@ export default class App {
         if (!$targetHeaderSpoller) {
             removeClasses('.header [data-spoller]', '_spoller-active')
             _slideUp('.header [data-spoller] + *', 500);
-        }
-
-        /*  
-            * Menu Spollers
-        */
-        const $targetMenuSpoller = isTarget(targetElement, '.page-menu [data-spoller]')
-        if (!$targetMenuSpoller) {
-            removeClasses('.page-menu [data-spoller]', '_spoller-active')
-            _slideUp('.page-menu [data-spoller] + *', 500);
-        }
-
-        /*  
-            * Intro Animation
-        */
-        const $introItem = isTarget(targetElement, '[data-intro-item]')
-        if ($introItem) {
-            const introTransition = 1400
-            const $introComponent = $introItem.closest('[data-intro]')
-            const $introItems = $introComponent.querySelectorAll('[data-intro-item]')
-
-            if(!$introComponent.classList.contains('_hold')) {
-
-                $introItems.forEach(item => item.classList.remove('_active', '_reduced'))
-                $introItem.classList.add('_active')
-                $introItems.forEach(item => {
-                    if(!item.classList.contains('_active')) {
-                        item.classList.add('_reduced')
-                    }
-                })
-                
-                $introComponent.classList.add('_hold')
-            }
-
-            setTimeout(() => $introComponent.classList.remove('_hold'), introTransition)
-        }
-
-        /*  
-            * Favorite toggle
-        */
-        const $favoriteIcon = isTarget(targetElement, '[data-favorite]')
-        if ($favoriteIcon) {
-            $favoriteIcon.classList.toggle('_active')
         }
 
         /*  

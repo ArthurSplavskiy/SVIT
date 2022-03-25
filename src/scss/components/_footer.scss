@@ -137,9 +137,13 @@
             @extend %sf16-14regular;
             @include lh(26, 16, 18, 14);
             color: $light-grey;
+            transition: $defaultTransition;
 
             @media(max-width: $mobileSmall) {
                 font-weight: 200;
+            }
+            &:hover {
+                color: $white;
             }
         }
         li {

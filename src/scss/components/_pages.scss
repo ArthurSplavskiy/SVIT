@@ -39,7 +39,155 @@
             }
         }
     }
-    &_soft-smart-home + .footer {
+    &_soft-smart-home + .footer, &_contacts + .footer {
         margin: 0;
     }
+    &_support {
+        .page-chess__row {
+            @media(max-width: $mobile) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    &_about {
+        .page-titers {
+            .titers {
+                border-top: 1px solid #989CF2;
+                &:last-child {
+                    border-bottom: 1px solid #989CF2;
+                }
+            }
+        }
+    }
+    &_gallery {
+        .page-section {
+            &:not(:last-child) {
+                .gallery {
+                    @media(max-width: $mobileSmall) {
+                        padding-bottom: rem(56);
+                        border-bottom: rem(1) solid #575759;
+                    }
+                }
+            }
+        }
+    }
+    &_not-found {
+
+        .__container {
+            position: relative;
+            img {
+                z-index: -1;
+                &:first-child {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &:last-child {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+                @media(max-width: $tablet) {
+                    display: none;
+                }
+            }
+        }
+        
+        div {
+            @extend %flex-center;
+            flex-direction: column;
+            position: relative;
+
+            &:before {
+                content: '';
+                @extend %absolute-center;
+                width: rem(220);
+                height: rem(220);
+                background: #161DC1;
+                border-radius: 100%;
+                filter: blur(180px);
+                z-index: -1;
+                @media(max-width: $mobileSmall) {
+                    width: rem(180);
+                    height: rem(180);
+                }
+            }
+        }
+        h1 {
+            @extend %hn320-64regular;
+            color: transparent!important;
+            -webkit-text-stroke: 1px $white;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: rem(24);
+            }
+        }
+        p {
+            @extend %sf18-14regular;
+            @include lh(30, 18, 14, 14);
+            text-align: center;
+            &:not(:last-child) {
+                margin-bottom: rem(80);
+                @media(max-width: $mobileSmall) {
+                    margin-bottom: rem(200);
+                }
+            }
+        }
+    }
+    &_privacy-policy {
+        .policy-page {
+            &__content {
+                margin: rem(72) 0 0 0;
+                @media(max-width: $mobileSmall) {
+                    margin: rem(32) 0 0 0;
+                }
+        
+                h1 {
+                    @extend %hn56-24regular;
+                    line-height: 110%;
+                    max-width: rem(488);
+                    margin-bottom: rem(48);
+                    @media(max-width: $mobileSmall) {
+                        margin-bottom: rem(16);
+                    }
+                }
+            }
+            &__text {
+                &:not(:last-child) {
+                    margin-bottom: rem(48);
+                }
+                h2 {
+                    @extend %sf24-18regular;
+                    line-height: 160%;
+                    &:not(:last-child) {
+                        margin-bottom: rem(24);
+                        @media(max-width: $mobileSmall) {
+                            margin-bottom: rem(16);
+                        }
+                    }
+                }
+                h3 {
+                    @extend %sf18-16regular;
+                    line-height: 160%;
+                    &:not(:last-child) {
+                        margin-bottom: rem(24);
+                        @media(max-width: $mobileSmall) {
+                            margin-bottom: rem(16);
+                        }
+                    }
+                }
+                p {
+                    @extend %sf16-14regular;
+                    line-height: 160%;
+                    &:not(:last-child) {
+                        margin-bottom: rem(32);
+                        @media(max-width: $mobileSmall) {
+                            margin-bottom: rem(16);
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }

@@ -101,12 +101,14 @@
                 border: 1px solid $light-grey;
                 border-radius: rem(30);
                 padding: rem(4) rem(15);
+                color: $main-black;
 
                 @media(max-width: $mobile) {
                     height: rem(48);
                 }
     
                 @include placeholder-content {
+                    color: $main-black;
                 }
             }
             &_textarea {
@@ -130,12 +132,14 @@
                 background: transparent;
                 border-radius: rem(30);
                 border: 1px solid $light-grey;
+                color: $main-black;
 
                 @media(max-width: $mobile) {
                     height: rem(140);
                 }
     
                 @include placeholder-content {
+                    color: $main-black;
                 }
             }
         }

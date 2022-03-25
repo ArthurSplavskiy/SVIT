@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 	@@include('html/_head.htm',{
-		"title":"Політика конфіденційності"
+		"title":"SVIT - Політика конфіденційності"
 	})
 	<body>
-		<div class="preloader"></div>
-		<div class="wrapper" id="page-top">
+		@@include('html/_preloader-markup.htm',{})
+		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page policy-page">
 
-				<div class="page-breadcrumbs">
-					<div class="_container">
+			<main class="page page_privacy-policy">
 
-						@@include('html/_breadcrumbs.htm', {
-							"root": "Головна",
-							"current": "Політика конфіденційності"
-						})
-
-					</div>
+				<div class="breadcrumbs__container">
+					@@include('html/_breadcrumbs.htm',{
+						"current": "Політика конфіденційності"
+					})
 				</div>
 
 				<div class="policy-page__content">
-					<div class="_container">
+					<div class="__container">
 						<h1>Політика конфіденціності</h1>
 
 						<div class="policy-page__text">

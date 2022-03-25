@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+		"title":"SVIT - Пристрої"
+	})
+	<body>
+		@@include('html/_preloader-markup.htm',{})
+		@@include('html/_page-bg-2.htm',{})
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_blog">
+
+				<div class="breadcrumbs__container">
+					@@include('html/_breadcrumbs.htm',{
+						"current": "Блог"
+					})
+				</div>
+
+				<section class="page-news">
+					<div class="page-news__container">
+						<div class="page-news__head">
+							<h1>Новини</h1>
+							<form action="#">
+								<select name="form[]" class="select">
+									<option value="1" selected>Категорії</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</form>
+						</div>
+						<div class="page-news__content">
+
+							<article class="news-item">
+								<div class="news-item__content" data-id="1">
+									<div class="news-item__image">
+										<a href="article.html" class="news-item__image-ibg">
+											<img data-src="img/13.jpeg" data-lazy alt="svit">
+										</a>
+									</div>
+									<div class="news-item__text">
+										<a href="article.html">
+											<h2>Крізь вогонь, воду та іскри: екшн у новій рекламній кампанії</h2>
+										</a>
+										<p>У ході глибинних інтерв’ю з українськими споживачами виявилось, що люди здебільшого вважають, що живуть в ідеальному світі, де неприємності трапляються лише з кимось іншим...</p>
+
+										<a href="article.html" class="news-item__time" data-da="[data-id='1'], 992, 0">
+											<span>НОвИНИ</span>
+											<time datetime="2022-02-01">01.02.22</time>
+										</a>
+									</div>
+								</div>
+							</article>
+
+							<article class="news-item">
+								<div class="news-item__content" data-id="2">
+									<div class="news-item__text">
+										<a href="article.html">
+											<h2>Крізь вогонь, воду та іскри: екшн у новій рекламній кампанії</h2>
+										</a>
+										<p>У ході глибинних інтерв’ю з українськими споживачами виявилось, що люди здебільшого вважають, що живуть в ідеальному світі, де неприємності трапляються лише з кимось іншим...</p>
+
+										<a href="article.html" class="news-item__time" data-da="[data-id='2'], 992, 0">
+											<span>НОвИНИ</span>
+											<time datetime="2022-02-01">01.02.22</time>
+										</a>
+									</div>
+									<div class="news-item__image">
+										<a href="article.html" class="news-item__image-ibg">
+											<img data-src="img/14.jpeg" data-lazy alt="svit">
+										</a>
+									</div>
+								</div>
+							</article>
+
+							<article class="news-item">
+								<div class="news-item__content" data-id="3">
+									<div class="news-item__image">
+										<a href="article.html" class="news-item__image-ibg">
+											<img data-src="img/15.jpeg" data-lazy alt="svit">
+										</a>
+									</div>
+									<div class="news-item__text">
+										<a href="article.html">
+											<h2>Крізь вогонь, воду та іскри: екшн у новій рекламній кампанії</h2>
+										</a>
+										<p>У ході глибинних інтерв’ю з українськими споживачами виявилось, що люди здебільшого вважають, що живуть в ідеальному світі, де неприємності трапляються лише з кимось іншим...</p>
+
+										<a href="article.html" class="news-item__time" data-da="[data-id='3'], 992, 0">
+											<span>НОвИНИ</span>
+											<time datetime="2022-02-01">01.02.22</time>
+										</a>
+									</div>
+								</div>
+							</article>
+
+							<article class="news-item">
+								<div class="news-item__content" data-id="4">
+									<div class="news-item__text">
+										<a href="article.html">
+											<h2>Крізь вогонь, воду та іскри: екшн у новій рекламній кампанії</h2>
+										</a>
+										<p>У ході глибинних інтерв’ю з українськими споживачами виявилось, що люди здебільшого вважають, що живуть в ідеальному світі, де неприємності трапляються лише з кимось іншим...</p>
+
+										<a href="article.html" class="news-item__time" data-da="[data-id='4'], 992, 0">
+											<span>НОвИНИ</span>
+											<time datetime="2022-02-01">01.02.22</time>
+										</a>
+									</div>
+									<div class="news-item__image">
+										<a href="article.html" class="news-item__image-ibg">
+											<img data-src="img/16.jpeg" data-lazy alt="svit">
+										</a>
+									</div>
+								</div>
+							</article>
+
+						</div>
+
+						<a href="#" class="page-btn page-btn_empty">Показати більше</a>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/_footer.htm',{})
+			@@include('html/_js.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+	</body>
+</html>

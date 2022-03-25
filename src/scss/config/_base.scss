@@ -15,7 +15,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: $black;
+	background: $main-black;
 
 	.lock & {
 		overflow: hidden;
@@ -53,7 +53,13 @@ h3 {
 		margin-top: rem(144);
 	}
 
-	&_soft, &_smart-home, &_soft-smart-home {
+	&_blog, &_article, &_contacts, &_privacy-policy {
+		margin-top: rem(131);
+		@media(max-width: $tablet) {
+			margin-top: rem(72);
+		}
+	}
+	&_soft, &_smart-home, &_soft-smart-home, &_support, &_about, &_gallery {
 		margin-top: rem(167);
 		@media(max-width: $tablet) {
 			margin-top: rem(142);
@@ -95,6 +101,12 @@ h3 {
 					padding-bottom: rem(64);
 				}
 			}
+		}
+	}
+	&_support, &_about, &_gallery {
+		margin-top: rem(87);
+		@media(max-width: $tablet) {
+			margin-top: rem(56);
 		}
 	}
 }

@@ -44,7 +44,7 @@ function initSliders() {
 	// при необходимости отключить
 	bildSliders();
 
-	if (document.querySelector('[data-slider-id="1"]')) {
+	if (document.querySelector('[data-slider-id="-1"]')) {
 		new Swiper('[data-slider-id="1"]', {
 			observer: true,
 			observeParents: true,
@@ -62,94 +62,68 @@ function initSliders() {
 		})
 	}
 
-	// if (document.querySelector('.model-slider__slider')) {
-	// 	const sliderSection = document.querySelector('.model-slider')
-	// 	const swiper = new Swiper('.model-slider__slider', {
-	// 		observer: true,
-	// 		observeParents: true,
-	// 		resizeObserver: true,
-	// 		autoHeight: true,
-	// 		speed: 500,
-	// 		grabCursor: true,
-	// 		effect: 'fade',
-	// 		fadeEffect: {
-	// 			crossFade: true
-	// 		},
-	// 		mousewheel: {
-	// 			eventsTarget: '.model-slider',
-	// 			releaseOnEdges: true
-	// 		}
-	// 	})
+	if (document.querySelector('.gallery')) {
+		document.querySelectorAll('.gallery').forEach((gallery, index) => {
+			
+			if(gallery) {
+				new Swiper(`[data-slider-id="${index}"]`, {
+					// lazy: {
+					// 	loadPrevNext: true,
+					// 	loadPrevNextAmount: 5
+					// },
+					observer: true,
+					observeParents: true,
+					slidesPerView: 'auto',
+					spaceBetween: 32,
+					resizeObserver: true,
+					autoHeight: true,
+					speed: 800,
+					grabCursor: true,
+					scrollbar: {
+						el: `[data-slider-scrollbar="${index}"]`,
+						draggable: true,
+						dragSize: 64
+					},
+					navigation: {
+						nextEl: `[data-slider-btn="${index}, next"]`,
+						prevEl: `[data-slider-btn="${index}, prev"]`,
+						disabledClass: '_disabled'
+					},
+					pagination: {
+						el: `[data-slider-pagination="${index}"]`,
+						type: 'fraction',
+						formatFractionCurrent: function(number) {
+							const el = document.querySelector(this.el)
+							const current = el.querySelector(`.${this.currentClass}`)
 
-	// 	swiper.mousewheel.disable()
+							if(number < 10) {
+								current.textContent = `0${number}`
+							} else {
+								current.textContent = number
+							}
+						},
+						formatFractionTotal: function(number) {
+							const el = document.querySelector(this.el)
+							const total = el.querySelector(`.${this.totalClass}`)
 
-	// 	function sliderScroll (e) {
-	// 		//console.log(sliderSection.getBoundingClientRect().top)
-
-	// 		if(sliderSection.getBoundingClientRect().top < 167) {
-	// 			swiper.mousewheel.enable()
-	// 			console.log('enabled')
-	// 		} else {
-	// 			swiper.mousewheel.disable()
-	// 		}
-	// 	}
-
-	// 	document.addEventListener('scroll', sliderScroll)
-	// }
-
-	// if(document.querySelector('[data-slider-touch="2"]')) {
-
-	// 	new Swiper('[data-slider-touch="2"]', {
-	// 		lazy: {
-	// 			checkInView: true,
-	// 			loadPrevNext: true,
-	// 			loadPrevNextAmount: 4
-	// 		},
-	// 		slidesPerView: 2,
-	// 		spaceBetween: 40,
-	// 		breakpoints: {
-	// 			0: {
-	// 				spaceBetween: 8,
-	// 				slidesPerView: 1,
-	// 			},
-	// 			480: {
-	// 				spaceBetween: 16,
-	// 				slidesPerView: 1.2,
-	// 			},
-	// 			768: {
-	// 				spaceBetween: 32,
-	// 				slidesPerView: 1.5,
-	// 			},
-	// 			992: {
-	// 				slidesPerView: 2,
-	// 			}
-	// 		}
-	// 	});
-	// }
-
-	// THUMBS SLIDER
-	if(document.querySelector('.product-slider')) {
-		const swiper = new Swiper(".product-slider__thumbs", {
-			spaceBetween: 16,
-			slidesPerView: 4,
-			freeMode: true,
-			watchSlidesProgress: true,
-		});
-		const swiper2 = new Swiper(".product-slider__slider", {
-			spaceBetween: 10,
-			navigation: {
-				nextEl: '[data-slider-btn="2, next"]',
-				prevEl: '[data-slider-btn="2, prev"]',
-				disabledClass: '_disabled'
-			},
-			pagination: {
-				el: '[data-slider-pagging="2"]',
-				type: 'bullets',
-			},
-			thumbs: {
-				swiper: swiper,
-			},
-		});
+							if(number < 10) {
+								total.textContent = `0${number}`
+							} else {
+								total.textContent = number
+							}
+						}
+					},
+					breakpoints: {
+						0: {
+							spaceBetween: 12
+						},
+						768: {
+							spaceBetween: 32
+						}
+					}
+				})
+			}
+		})
 	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)

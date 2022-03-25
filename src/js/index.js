@@ -8,6 +8,7 @@ import './core/scroll/lazyload.js'
 import "./core/utils/sliders.js"
 import "./core/forms/select.js"
 import "./core/utils/popups.js"
+import "./core/utils/map.js"
 //import './core/scroll/simplebar.js'
 //import "./core/utils/tippy.js"
 //import "./core/forms/nouislider.js"

@@ -1,47 +1,59 @@
+.select_select {
+	&._select-open {
+		.select__value:before {
+			transform: rotate(-180deg);
+		}
+	}
+}
 .select {
 	position: relative;
-	// .select__body
-	&__body {
+	line-height: 1;
+	min-width: rem(288);
+	
+	// .select__item
+	&__item {
 		position: relative;
 	}
 	// .select__title
 	&__title {
-		color: inherit;
-		text-align: left;
-		// border: 1px solid $grey;
-		// background-color: $white;
-		cursor: pointer;
 		width: 100%;
+		color: $white;
+		border: 2px solid $white;
+		background-color: transparent;
+		cursor: pointer;
+		border-radius: rem(10);	
+
+		@media(max-width: $mobileSmall) {
+			border-radius: rem(30);	
+		}
 	}
 	// .select__value
 	&__value {
-		text-transform: uppercase;
+		position: relative;
 		display: flex;
+		height: 56px;
+		padding: 0px 16px;
 		align-items: center;
-		height: rem(56);
-		padding: 0px em(16);
 		justify-content: space-between;
 		flex-direction: row-reverse;
-		&:before {
-			content: "";
-			align-self: stretch;
-			flex: 0 0 rem(16);
-			transition: all 0.3s ease 0s;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-image: url('../img/interface/shevron-black.svg');
-			background-repeat: no-repeat;
-			background-position: center;
-
-			._select-open & {
-				transform: rotate(180deg);
-			}
+		span {
+			height: auto;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			line-height: 100%;
 		}
-	}
-	// .select__text
-	&__text {
-		flex: 1 1 auto;
+		&:before {
+			content: '';
+			display: block;
+			width: rem(17);
+			height: rem(9);
+			background: url('../img/interface/shevron-ico.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			transition: all 0.3s ease 0s;
+		}
 	}
 	&__input {
 		width: 100%;
@@ -50,74 +62,28 @@
 	}
 	// .select__options
 	&__options {
-		overflow-y: auto;
-		overflow-x: hidden;
+		color: $white;
+		display: none;
 		position: absolute;
-		top: rem(60);
+		top: rem(64);
+		border-radius: rem(10);
 		min-width: 100%;
 		left: 0;
-		background-color: $white;
-		//border: 1px solid $disabled;
-		padding: rem(16) rem(36) rem(16) rem(16);
-		max-height: rem(156);
-	}
-	// .select__scroll
-	&__scroll {
-		overflow-y: auto;
-		overflow-x: hidden;
-		// Максимальная высота
-		max-height: rem(156);
-		// Стили скроллбара
-		.simplebar-scrollbar {
-			&::before {
-				opacity: 1;
-			}
-		}
+		background-color: $black;
+		border: 2px solid $white;
+		padding: 10px 0px 5px 0px;
+		z-index: 2;
 	}
 	// .select__option
 	&__option {
-		width: 100%;
-		text-align: left;
+		display: block;
 		cursor: pointer;
-		color: inherit;
-		text-transform: uppercase;
-		transition: $defaultTransition;
-
-		&._select-selected {
-			background-color: #eee;
+		padding: 5px 15px;
+		margin: 0px 0px 0px 0px;
+		@media (min-width: 992px) {
+			&:hover {
+				color: rgba($white, 0.8);
+			}
 		}
 	}
-
-	// Конструкция дополнительных данных
-	&__row {
-		display: inline-flex;
-		align-items: center;
-	}
-	&__asset {
-	}
-	&__text {
-	}
-
-	// Состояния селекта
-	&._select-open {
-		z-index: 5;
-	}
-	&._select-disabled {
-	}
-	&._select-active {
-	}
-	&._select-focus {
-	}
-	&._select-multiple {
-	}
-	&._select-checkbox {
-	}
-	&__label {
-		display: none;
-	}
-}
-
-// Тег
-._select-tag {
-	cursor: pointer;
 }
